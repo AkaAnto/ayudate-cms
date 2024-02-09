@@ -22,7 +22,7 @@ cssselect2==0.7.0
     # via svglib
 dj-database-url==2.1.0
     # via -r requirements.in
-django==4.2.8
+django==4.1
     # via
     #   -r requirements.in
     #   dj-database-url
