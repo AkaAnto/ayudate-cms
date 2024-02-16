@@ -5,28 +5,28 @@ body{
 .bg-dark{
     background-color: #5E3578 !important;
 }
-#banner-home{
- background: linear-gradient(146.06deg, rgba(0, 0, 0, 0.85) 20.11%, rgba(0, 0, 0, 0) 107.87%) !important;
- width: 1440px;
- height: 769px;
- background-image: url("ruta/a/tu/imagen.jpg");
- /* Inside auto layout */
- flex: none;
- order: 0;
- flex-grow: 0;
- z-index: 0;
-
-}
-#hero-image{
-    z-index:-1;
-    margin-top: 0px;
-    position:relative;
+/* header */
+#banner-home {
+    background: linear-gradient(146.06deg, rgba(0, 0, 0, 0.85) 20.11%, rgba(0, 0, 0, 0) 107.87%) !important;
     width: 1440px;
-    height:769px;
-
+    height: 769px;
+    background-image: url("ruta/a/tu/imagen.jpg");
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
 }
 
-#ayudatefeliz{
+#hero-image {
+    z-index: -2;
+    margin-top: 0px;
+    position: relative;
+    width: 1440px;
+    height: 769px;
+}
+
+#ayudatefeliz {
     width: 521px;
     height: 72px;
     font-family: 'Poppins';
@@ -40,10 +40,11 @@ body{
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin-top:420px;
-    margin-left:50px;
+    margin-top: 420px;
+    margin-left: 50px;
 }
-#ayudate-text{
+
+#ayudate-text {
     width: 610px;
     height: 92px;
     font-family: 'Poppins';
@@ -51,8 +52,8 @@ body{
     font-weight: 700;
     font-size: 14px;
     line-height: 23px;
-    margin-top:px;
-    margin-left:80px;
+    margin-top: -200px; /* Se ajusta el margen superior para que el texto quede por encima del banner */
+    margin-left: 80px;
     /* or 164% */
     display: flex;
     align-items: center;
@@ -62,8 +63,9 @@ body{
     flex: none;
     order: 1;
 }
-#bttn1{
-    background-color: #D9D9D9;
+
+#bttn1 {
+    background-color: #5E3578; /* Se corrige el color de fondo */
     /* Auto layout */
     display: flex;
     flex-direction: row;
@@ -76,10 +78,10 @@ body{
     background: #5E3578;
     border-radius: 15px;
     position: absolute;
-
 }
-#conocenos-btn{
-    background-color: rgba(94, 53, 120, 1)
+
+#conocenos-btn {
+    background-color: rgba(94, 53, 120, 1); /* Se añade punto y coma al final */
     /* Auto layout */
     display: flex;
     flex-direction: row;
@@ -94,46 +96,100 @@ body{
     /* Inside auto layout */
     flex: none;
     order: 2;
-    flex-grow: 0;*/
-}
-#frame-nos{
-width: 489px;
-height: 66px;
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
+    flex-grow: 0;
 }
 
-#nos-text{
-position: absolute;
-width: 488px;
-height: 18px;
-left: 0px;
-top: 0px;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 18px;
-/* identical to box height */
-letter-spacing: 0.13em;
-text-transform: uppercase;
-color: #BCBCBC;
+#frame-nos {
+    width: 489px;
+    height: 66px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
-#Acnos{
-position: absolute;
-width: 488px;
-height: 54px;
-left: 0px;
-top: 26px;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 36px;
-line-height: 54px;
-/* identical to box height */
-letter-spacing: 0.02em;
-text-transform: uppercase;
-color: #181818;
+
+#nos-text {
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #BCBCBC;
 }
+
+#Acnos {
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 54px;
+    /* identical to box height */
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #181818;
+}
+.link {
+  color: black; /* Color por defecto del enlace */
+  text-decoration: none; /* Eliminar subrayado por defecto */
+}
+
+.link:hover {
+  color: blue; /* Cambiar color al pasar el cursor sobre el enlace */
+  text-decoration: underline; /* Subrayar al pasar el cursor sobre el enlace */
+}
+ #boton-amarillo {
+        background-color: #FFF00;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+.redes-sociales {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .redes-sociales a {
+        display: inline-block;
+        width: 40px; /* ajusta el tamaño según necesites */
+        height: 40px; /* ajusta el tamaño según necesites */
+        background-size: cover;
+        text-indent: -9999px; /* oculta el texto */
+    }
+
+    /* Ejemplo de estilos para botones específicos */
+    .redes-sociales .facebook {
+        background: url('https://cdn.jsdelivr.net/npm/simple-icons@3/icons/facebook.svg') no-repeat center center;
+    }
+
+    .redes-sociales .twitter {
+        background: url('https://cdn.jsdelivr.net/npm/simple-icons@3/icons/twitter.svg') no-repeat center center;
+    }
+
+    .redes-sociales .instagram {
+        background: url('https://cdn.jsdelivr.net/npm/simple-icons@3/icons/instagram.svg') no-repeat center center;
+    }
+
+    .redes-sociales .linkedin {
+        background: url('https://cdn.jsdelivr.net/npm/simple-icons@3/icons/linkedin.svg') no-repeat center center;
+    }
+
