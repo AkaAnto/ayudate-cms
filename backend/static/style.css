@@ -1,195 +1,78 @@
 body{
     overflow-x: hidden;
+    font-family: poppins !important;
 }
 
 .bg-dark{
-    background-color: #5E3578 !important;
-}
-/* header */
-#banner-home {
-    background: linear-gradient(146.06deg, rgba(0, 0, 0, 0.85) 20.11%, rgba(0, 0, 0, 0) 107.87%) !important;
-    width: 1440px;
-    height: 769px;
-    background-image: url("ruta/a/tu/imagen.jpg");
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    z-index: 0;
+    background-color: rgba(0,0,0, 0.0) !important;
+    color: white;
+    z-index: 1000;
 }
 
-#hero-image {
-    z-index: -2;
-    margin-top: 0px;
-    position: relative;
-    width: 1440px;
-    height: 769px;
+.navbar-nav {
+    width: 70%;
+    margin-left: 15%;
 }
 
-#ayudatefeliz {
-    width: 521px;
-    height: 72px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 72px;
-    /* identical to box height */
-    color: #FFFFFF;
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin-top: 420px;
-    margin-left: 50px;
+.nav-link{
+    color: white !important;
+    font-size: 17px;
+    font-weight: 450;
 }
 
-#ayudate-text {
-    width: 610px;
-    height: 92px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 23px;
-    margin-top: -200px; /* Se ajusta el margen superior para que el texto quede por encima del banner */
-    margin-left: 80px;
-    /* or 164% */
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.02em;
-    color: #EBEBEB;
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
+#menu-btn{
+    font-size: 10px;
+    background-color: #FFD600 !important;
+    padding-top: 9px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 7px;
 }
 
-#bttn1 {
-    background-color: #5E3578; /* Se corrige el color de fondo */
-    /* Auto layout */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 14px 32px;
-    gap: 8px;
-    width: 233px;
-    height: 52px;
-    background: #5E3578;
-    border-radius: 15px;
+#menu-background{
+    z-index: -1;
     position: absolute;
+    display: inline;
+    width: 100%;
 }
 
-#conocenos-btn {
-    background-color: rgba(94, 53, 120, 1); /* Se añade punto y coma al final */
-    /* Auto layout */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 14px 32px;
-    gap: 8px;
-    width: 233px;
-    height: 52px;
-    background: #5E3578;
-    border-radius: 15px;
-    /* Inside auto layout */
-    flex: none;
-    order: 2;
-    flex-grow: 0;
+#menu-background img{
+    width: 100%;
 }
 
-#frame-nos {
-    width: 489px;
-    height: 66px;
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+#hero-image{
+    position: relative;
+    z-index: -1;
+    max-height: 680px;
 }
 
-#nos-text {
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 18px;
-    /* identical to box height */
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
+#hero-breaker{
+    height: 350px;
+}
+
+#hero-text-holder{
+    z-index: 1;
+    display: block;
+    position: relative;
+    margin-left: 9.5%;
+    max-width: 45%;
+    color: white;
+    font-family: poppins !important;
+}
+
+#hero-text-holder h1{
+    font-size: 45px;
+}
+
+#hero-text-holder p {
+    width: 80%;
+    padding-top: 12px;
+    line-height: 25px;
+    text-align: left !important;
+    font-size: small;
+}
+
+#about-title-small{
+    font-size: 14px;
     color: #BCBCBC;
 }
-
-#Acnos {
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 54px;
-    /* identical to box height */
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: #181818;
-}
-.link {
-  color: black; /* Color por defecto del enlace */
-  text-decoration: none; /* Eliminar subrayado por defecto */
-}
-
-.link:hover {
-  color: blue; /* Cambiar color al pasar el cursor sobre el enlace */
-  text-decoration: underline; /* Subrayar al pasar el cursor sobre el enlace */
-}
- #boton-amarillo {
-        background-color: #FFF00;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 4px;
-    }
-
-.redes-sociales {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .redes-sociales a {
-        display: inline-block;
-        width: 40px; /* ajusta el tamaño según necesites */
-        height: 40px; /* ajusta el tamaño según necesites */
-        background-size: cover;
-        text-indent: -9999px; /* oculta el texto */
-    }
-
-    /* Ejemplo de estilos para botones específicos */
-    .redes-sociales .facebook {
-        background: url('https://cdn.jsdelivr.net/npm/simple-icons@3/icons/facebook.svg') no-repeat center center;
-    }
-
-    .redes-sociales .twitter {
-        background: url('https://cdn.jsdelivr.net/npm/simple-icons@3/icons/twitter.svg') no-repeat center center;
-    }
-
-    .redes-sociales .instagram {
-        background: url('https://cdn.jsdelivr.net/npm/simple-icons@3/icons/instagram.svg') no-repeat center center;
-    }
-
-    .redes-sociales .linkedin {
-        background: url('https://cdn.jsdelivr.net/npm/simple-icons@3/icons/linkedin.svg') no-repeat center center;
-    }
-
