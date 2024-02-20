@@ -84,6 +84,16 @@ body{
 #about-text-2{
     width: 80% !important;
 }
+
+#text-tca-holder{
+    text-align: justify !important;
+    width: 50% ;
+    font-size: 24px ;
+    margin-left: 25% ;
+    margin-top: 22px;
+}
+
+
 .mission-div.purple {
     background-color: #886C9A;
 }
