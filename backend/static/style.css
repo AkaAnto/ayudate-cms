@@ -235,17 +235,20 @@ body{
     line-height: 26px;
 }
 
-#btn-dk{
-    justify-content: center;
-    align-items: center;
+.btn-primary {
+     display: inline-flex; /* Para que se ajuste al contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
     padding: 10px 24px;
     gap: 8px;
-    width: 245px;
-    height: 38px;
     background: #ECE2F2;
     border-radius: 200px;
+    border: none; /* Elimina el borde */
+    color: #6A0DAD;
+    font-weight: bold;
 }
-#btn-cl{
+
+.btn-dark.btn{
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -257,4 +260,5 @@ body{
     height: 46px;
     background: #5E3578;
     border-radius: 15px;
+    border: none; /* Elimina el borde */
 }
