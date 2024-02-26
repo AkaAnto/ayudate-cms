@@ -28,5 +28,6 @@ djangocms-frontend!=1.2.1
 
 django-filer
 
+gunicorn
 
 pip-tools  # needed for compilation of this file into requirements.txt, see start of file

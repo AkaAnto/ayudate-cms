@@ -243,14 +243,15 @@ footer {
 footer h5 {
     font-size: 14px;
     font-weight: 700;
+}
 
 .btn-primary {
-     display: inline-flex; /* Para que se ajuste al contenido */
+    display: inline-flex; /* Para que se ajuste al contenido */
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
     padding: 10px 24px;
     gap: 8px;
-    background: #ECE2F2;
+    background: #ECE2F2 !important;
     border-radius: 200px;
     border: none; /* Elimina el borde */
     color: #6A0DAD;
