@@ -168,6 +168,8 @@ wheel==0.42.0
     # via pip-tools
 whitenoise==6.6.0
     # via -r requirements.in
+gunicorn==21.2.0
+    # via -r requirements.in
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip
