@@ -321,3 +321,13 @@ footer h5 {
     width: 50%;
     margin-left: 25%;
 }
+.text-left a {
+    text-decoration: none;
+    color: inherit;
+    align-items: left !important;
+}
+
+.text-left i {
+    font-size: 24px;
+    align-items: left !important;
+}
