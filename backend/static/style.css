@@ -164,7 +164,7 @@ body {
     margin-left: 9.5%;
     max-width: 45%;
     color: white;
-    font-family: poppins !important;
+    font-family: "Poppins", sans-serif !important;
 }
 
 #hero-text-holder h1 {
@@ -274,7 +274,7 @@ footer h5 {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: fluid;
     align-items: center;
     padding: 14px 32px;
     gap: 8px;
