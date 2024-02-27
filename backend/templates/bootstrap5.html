@@ -43,7 +43,7 @@
 {% endblock %}
 
 {% block footer %}
-<footer class="container">
+<footer class="container-fluid">
     <div class="row row-cols-1 row-cols-md-3 py-3 my-3 border-top">
         <div class="col text-center mb-3">
             <h2 style="text-align: justify;">&iquest;Necesitas ayuda en l&iacute;nea?</h2>
@@ -54,22 +54,21 @@
         </div>
         <div class="col text-center mb-3">
             <h5>Nuestras Redes Sociales:</h5>
-            <div class="redes-sociales row justify-content-center">
-                <div class="facebook col text-center">
-                    <a href="#">Facebook</a>
-                </div>
-                <div class="twitter col text-center">
-                    <a href="#">Twitter</a>
-                </div>
-                <div class="instagram col text-center">
-                    <a href="#">Instagram</a>
-                </div>
-                <div class="linkedin col text-center">
-                    <a href="#">LinkedIn</a>
+            <div class="row">
+                <div class="redes-sociales col-3 offset-md-4 justify-content-center">
+                    <div class="facebook col text-center">
+                        <a href="#">Facebook</a>
+                    </div>
+                    <div class="twitter col text-center">
+                        <a href="#">Twitter</a>
+                    </div>
+                    <div class="instagram col text-center">
+                        <a href="#">Instagram</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col text-center mb-3 border-top">
+        <div class="col text-center mb-3">
             <h5 class="text-justify">&iquest;Deseas aportar una contribuci&oacute;n?</h5>
             <p class="text-justify">Tu contribuci&oacute;n puede ser el rayo de esperanza que ilumine el camino de aquellos
                 en necesidad. Al donar a la Fundaci&oacute;n Ay&uacute;date, est&aacute;s extendiendo tu mano amiga a

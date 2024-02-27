@@ -1,115 +1,117 @@
-body{
+body {
     overflow-x: hidden;
-    .poppins-thin {
+}
+
+.poppins-thin {
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
 }
 
 .poppins-extralight {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
 }
 
 .poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .poppins-extrabold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
 }
 
 .poppins-black {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
 .poppins-thin-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
 }
 
 .poppins-extralight-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
 }
 
 .poppins-light-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
 }
 
 .poppins-regular-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .poppins-medium-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
 }
 
 .poppins-semibold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
 }
 
 .poppins-bold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .poppins-extrabold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
 }
 
 .poppins-black-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: italic;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
 }
 
-.bg-dark{
-    background-color: rgba(0,0,0, 0.0) !important;
+.bg-dark {
+    background-color: rgba(0, 0, 0, 0.0) !important;
     color: white;
     z-index: 1000;
 }
@@ -119,13 +121,13 @@ body{
     margin-left: 15%;
 }
 
-.nav-link{
+.nav-link {
     color: white !important;
     font-size: 17px;
     font-weight: 450;
 }
 
-#menu-btn{
+#menu-btn {
     font-size: 10px;
     background-color: #FFD600 !important;
     padding-top: 9px;
@@ -134,28 +136,28 @@ body{
     padding-bottom: 7px;
 }
 
-#menu-background{
+#menu-background {
     z-index: -1;
     position: absolute;
     display: inline;
     width: 100%;
 }
 
-#menu-background img{
+#menu-background img {
     width: 100%;
 }
 
-#hero-image{
+#hero-image {
     position: relative;
     z-index: -1;
     max-height: 680px;
 }
 
-#hero-breaker{
+#hero-breaker {
     height: 350px;
 }
 
-#hero-text-holder{
+#hero-text-holder {
     z-index: 1;
     display: block;
     position: relative;
@@ -165,7 +167,7 @@ body{
     font-family: poppins !important;
 }
 
-#hero-text-holder h1{
+#hero-text-holder h1 {
     font-size: 45px;
 }
 
@@ -177,24 +179,24 @@ body{
     font-size: small;
 }
 
-#about-title-small{
+#about-title-small {
     font-size: 14px;
     color: #BCBCBC;
 }
 
-#about-img-left{
+#about-img-left {
     margin-left: 9em !important;
 }
 
-#about-text-2{
+#about-text-2 {
     width: 80% !important;
 }
 
-#text-tca-holder{
+#text-tca-holder {
     text-align: justify !important;
-    width: 50% ;
-    font-size: 24px ;
-    margin-left: 25% ;
+    width: 50%;
+    font-size: 24px;
+    margin-left: 25%;
     margin-top: 22px;
 }
 
@@ -202,14 +204,17 @@ body{
 .mission-div.purple {
     background-color: #886C9A;
 }
+
 .mission-div.yellow {
     background-color: #FFD600 !important;
     color: black !important;
 }
+
 .mission-div.blue {
     background-color: #9750C4 !important;
     color: white !important;
 }
+
 .mission-div {
     color: white;
     height: 400px;
@@ -260,12 +265,12 @@ footer h5 {
 }
 
 .btn-primary:hover {
-    background-color: #25D366!important; /* Color morado al pasar el mouse */
+    background-color: #25D366 !important; /* Color morado al pasar el mouse */
     color: #ECE2F2 !important; /* Cambia el color del texto al pasar el mouse */
 }
 
 
-.btn-dark.btn{
+.btn-dark.btn {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -279,44 +284,40 @@ footer h5 {
     border-radius: 15px;
     border: none; /* Elimina el borde */
 }
-.redes-sociales{
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 24px;
-    color: #6A0DAD;
-}
+
 
 .redes-sociales:hover {
     color: #9C27B0;
 }
 
 .redes-sociales {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
 
 .redes-sociales a {
-        display: inline-block;
-        width: 40px; /* ajusta el tamaño según necesites */
-        height: 40px; /* ajusta el tamaño según necesites */
-        background-size: cover;
-        text-indent: -9999px; /* oculta el texto */
-    }
-
+    display: inline-block;
+    width: 30px; /* ajusta el tamaño según necesites */
+    height: 30px; /* ajusta el tamaño según necesites */
+    background-size: cover;
+    text-indent: -9999px; /* oculta el texto */
+}
 
 .redes-sociales .facebook {
-        background: url('https://cdn.jsdelivr.net/npm/simple-icons@3/icons/facebook.svg') no-repeat center center;
-    }
+    background: url('https://cdn.jsdelivr.net/npm/simple-icons@3/icons/facebook.svg') no-repeat center center;
+    width: 50%;
+    margin-left: 25%;
+}
 
 .redes-sociales .twitter {
-        background: url('https://cdn.jsdelivr.net/npm/simple-icons@3/icons/twitter.svg') no-repeat center center;
-    }
+    background: url('https://cdn.jsdelivr.net/npm/simple-icons@3/icons/twitter.svg') no-repeat center center;
+    width: 50%;
+    margin-left: 25%;
+}
 
 .redes-sociales .instagram {
-        background: url('https://cdn.jsdelivr.net/npm/simple-icons@3/icons/instagram.svg') no-repeat center center;
-    }
-
-.redes-sociales .linkedin {
-        background: url('https://cdn.jsdelivr.net/npm/simple-icons@3/icons/linkedin.svg') no-repeat center center;
-    }
+    background: url('https://cdn.jsdelivr.net/npm/simple-icons@3/icons/instagram.svg') no-repeat center center;
+    width: 50%;
+    margin-left: 25%;
+}
