@@ -256,7 +256,14 @@ footer h5 {
     border: none; /* Elimina el borde */
     color: #6A0DAD;
     font-weight: bold;
+    transition: background-color 5.5s ease; /* Transición suave */
 }
+
+.btn-primary:hover {
+    background-color: #6A0DAD !important; /* Color morado al pasar el mouse */
+    color: #ECE2F2 !important; /* Cambia el color del texto al pasar el mouse */
+}
+
 
 .btn-dark.btn{
     box-sizing: border-box;
