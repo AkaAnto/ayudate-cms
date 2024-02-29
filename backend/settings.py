@@ -27,10 +27,10 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 INSTALLED_APPS = [
     'backend',
+    'storages',
 
     # optional, but used in most projects
     'djangocms_admin_style',
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -78,6 +78,8 @@ INSTALLED_APPS = [
     'djangocms_frontend.contrib.image',
     'djangocms_frontend.contrib.tabs',
     'djangocms_frontend.contrib.utilities',
+
+
 ]
 
 MIDDLEWARE = [
@@ -125,7 +127,7 @@ TEMPLATES = [
 THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.colorspace',
     'easy_thumbnails.processors.autocrop',
-    #'easy_thumbnails.processors.scale_and_crop',
+    'easy_thumbnails.processors.scale_and_crop',
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters',
 )
@@ -220,3 +222,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 CMS_CONFIRM_VERSION4 = True
 DJANGOCMS_VERSIONING_ALLOW_DELETING_VERSIONS = True
+
+AWS_ACCESS_KEY_ID = 'AKIATCKAOKMXIWWK643I'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'fundaciontest'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+'CacheControl': 'max-age=86400',
+}
+AWS_LOCATION = 'ayudate-web'
+STATICFILES_DIRS = [
+os.path.join(BASE_DIR, 'mysite/static'),
+]
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
