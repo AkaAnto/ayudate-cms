@@ -8,6 +8,7 @@ uwsgi
 django<5
 dj-database-url
 django-storage-url
+django-storages
 whitenoise
 easy-thumbnails
 

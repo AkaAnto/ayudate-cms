@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '<a string of random characters>')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG') == "True"
+DEBUG = True
 
 ALLOWED_HOSTS = [os.environ.get('DOMAIN'),]
 if DEBUG:
@@ -191,30 +191,14 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_collected')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-# Media files
-# DEFAULT_FILE_STORAGE is configured using DEFAULT_STORAGE_DSN
-
-# read the setting value from the environment variable
-DEFAULT_STORAGE_DSN = os.environ.get('DEFAULT_STORAGE_DSN')
-
-# dsn_configured_storage_class() requires the name of the setting
-DefaultStorageClass = dsn_configured_storage_class('DEFAULT_STORAGE_DSN')
-
-# Django's DEFAULT_FILE_STORAGE requires the class name
-DEFAULT_FILE_STORAGE = 'backend.settings.DefaultStorageClass'
-
-# only required for local file storage and serving, in development
-MEDIA_URL = 'media/'
-MEDIA_ROOT = os.path.join('/data/media/')
-
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}
 
 SITE_ID = 1
 
@@ -227,19 +211,24 @@ AWS_ACCESS_KEY_ID = 'AKIATCKAOKMXIWWK643I'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'fundaciontest'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
 AWS_S3_OBJECT_PARAMETERS = {
-'CacheControl': 'max-age=86400',
+    'CacheControl': 'max-age=86400',
 }
 AWS_LOCATION = 'ayudate-web'
 STATICFILES_DIRS = [
-os.path.join(BASE_DIR, 'mysite/static'),
+    os.path.join(BASE_DIR, 'backend/static'),
 ]
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'backend.filer_backends.storages.StaticStorage'
+DEFAULT_FILE_STORAGE = 'backend.filer_backends.storages.MediaStorage'
 MEDIAFILES_DIRS = [
-os.path.join(BASE_DIR, 'mysite/media'),
+    os.path.join(BASE_DIR, 'data/media'),
 ]
 MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+CMS_MEDIA_URL = 'https://%s/%s/data/media/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 MEDIAFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'data/media/')
+print(f"STATIC_URL {STATIC_URL}")
