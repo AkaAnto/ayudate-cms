@@ -1,0 +1,47 @@
+#home-menu-background, #home-menu-background-mobile {
+    z-index: -1;
+    position: absolute;
+    display: inline;
+    width: 100%;
+}
+
+#home-menu-background img, #home-menu-background-mobile img {
+    width: 100%;
+}
+
+#home-menu-background-text-mobile{
+    margin-top: 70%;
+    color: white;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#home-menu-background-text-mobile p{
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 993px) {
+    #home-menu-background-text-mobile{
+        margin-top: 20%;
+        color: white;
+        width: 38%;
+        margin-left: 12%;
+    }
+    #home-menu-background-text-mobile p{
+        font-size: 13px;
+        margin-top: 20px;
+    }
+
+}
+@media only screen and (min-width: 1320px) {
+    #home-menu-background-text-mobile{
+        width: 30%;
+        margin-left: 20%;
+    }
+    #home-menu-background-text-mobile p{
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+}

@@ -114,11 +114,12 @@ body {
     background-color: rgba(0, 0, 0, 0.0) !important;
     color: white;
     z-index: 1000;
+    height: 85px;
+    margin-bottom: -85px;
 }
 
 .navbar-nav {
-    width: 70%;
-    margin-left: 15%;
+    width: 100%;
 }
 
 .nav-link {
@@ -134,18 +135,78 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 7px;
+    width: 100px;
 }
 
-#menu-background {
-    z-index: -1;
-    position: absolute;
-    display: inline;
-    width: 100%;
+#donate-mobile{
+    margin-top: 30px;
+    width: 80%;
+    margin-left: 10%;
+    height: 215px;
+    border-radius: 30px;
+    background-color: #E2B4FF;
+    color: black;
+    display: block;
 }
 
-#menu-background img {
-    width: 100%;
+#donate-mobile-btn{
+    bottom: 0px;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 12px;
+    margin-top: 3px;
 }
+
+#donate-mobile h2{
+    padding-top: 45px;
+    padding-left: 17px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#donate-mobile p{
+    padding-top: 13px;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-size: 14px;
+}
+
+.btn-purple{
+    background-color: #5E3578;
+    color: white;
+    font-size: 14px;
+    padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+@media only screen and (max-width: 992px) {
+    #navbarSupportedContent{
+        background: rgb(255, 255, 255);
+        height: 500px;
+    }
+    #navbarSupportedContent .nav-item {
+        margin-left: 25px;
+        margin-right: 35px;
+        border-bottom: 1px solid lightgray;
+    }
+    #navbarSupportedContent .nav-link {
+        color: black !important;
+        font-size: 14px;
+        font-weight: 300;
+        padding-top: 15px;
+        text-align: left;
+        padding-bottom: 12px;
+    }
+}
+@media only screen and (min-width: 993px) {
+    #navbarSupportedContent .navbar-nav{
+        justify-content: center;
+    }
+}
+
 
 #hero-image {
     position: relative;

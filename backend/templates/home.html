@@ -1,0 +1,44 @@
+{% extends "bootstrap5.html" %}
+{% load cms_tags menu_tags %}
+{% load static %}
+{% block bottom_css %}
+    <link href="{% static 'home.css' %}" rel="stylesheet">
+{% endblock %}
+{% block navbar %}
+<nav class="navbar {% block navbar_options %}navbar-expand-lg navbar-dark bg-dark{% endblock %}">
+    <div class="container">
+        <a class="navbar-brand" href="/">{% block brand %}
+            <img src="{% static 'logo-ayudate.webp' %}" alt="logo ayudate"/>
+            {% endblock %}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                {% block menubar %}
+                    {% show_menu 0 100 0 100 'menu/menu.html' %}
+                {% endblock %}
+            </ul>
+            {% block searchbar %}
+                <button class="btn btn-warning d-none d-lg-block d-xl-block d-xxl-block" id="menu-btn">DONA AQUI</button>
+            {% endblock %}
+            <div id="donate-mobile" class="d-lg-none">
+                {% placeholder "texto-menu-mobile" %}
+                <button id="donate-mobile-btn" class="btn btn-warning d-lg-none" >CONTRIBUYE CON TU DONACION</button>
+            </div>
+        </div>
+    </div>
+</nav>
+<div id="home-menu-background" class="d-none d-lg-block d-xl-block d-xxl-block">
+    {% placeholder "imagen-fondo-menu" %}
+</div>
+<div id="home-menu-background-mobile" class="d-lg-none">
+    {% placeholder "imagen-fondo-menu-mobile" %}
+</div>
+<div id="home-menu-background-text-mobile" >
+    {% placeholder "texto-imagen-fondo-menu-mobile" %}
+    <button id="home-menu-background-text-mobile-btn" class="btn btn-purple">CONTACTANOS <i class="fa fa-arrow-right"></i></button>
+</div>
+{% endblock %}
+{% block footer %}{% endblock %}

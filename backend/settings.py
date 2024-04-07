@@ -3,32 +3,21 @@ import os
 import dj_database_url
 from django_storage_url import dsn_configured_storage_class
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '<a string of random characters>')
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = os.environ.get('DEBUG', False) == 'True'
 ALLOWED_HOSTS = [os.environ.get('DOMAIN'),]
 if DEBUG:
     ALLOWED_HOSTS = ["*", "ayudate-fundacion-develop-f037f7ceb296.herokuapp.com"]
 
-# Redirect to HTTPS by default, unless explicitly disabled
 SECURE_SSL_REDIRECT = os.environ.get('SECURE_SSL_REDIRECT') != "False"
-
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-
-# Application definition
 
 INSTALLED_APPS = [
     'backend',
     'storages',
-
     # optional, but used in most projects
     'djangocms_admin_style',
     'django.contrib.admin',
@@ -81,7 +70,6 @@ INSTALLED_APPS = [
 
 
 ]
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -98,9 +86,7 @@ MIDDLEWARE = [
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
 ]
-
 ROOT_URLCONF = 'backend.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -123,7 +109,6 @@ TEMPLATES = [
         },
     },
 ]
-
 THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.colorspace',
     'easy_thumbnails.processors.autocrop',
@@ -131,31 +116,15 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters',
 )
-
 CMS_TEMPLATES = [
-    # a minimal template to get started with
     ('minimal.html', 'Minimal template'),
-
-    # optional templates that extend base.html, to be used with Bootstrap 5
     ('bootstrap5.html', 'Bootstrap 5 Demo'),
-
     ('whitenoise-static-files-demo.html', 'Static File Demo'),
+    ('home.html', 'Home Template'),
 ]
-
 WSGI_APPLICATION = 'backend.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-# Configure database using DATABASE_URL; fall back to sqlite in memory when no
-# environment variable is available, e.g. during Docker build
 DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite://:memory:')
 DATABASES = {'default': dj_database_url.parse(DATABASE_URL)}
-
-
-# Password validation
-# https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
 if not DEBUG:
     AUTH_PASSWORD_VALIDATORS = [
@@ -172,13 +141,7 @@ if not DEBUG:
             'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
         },
     ]
-
-
-# Internationalization
-# https://docs.djangoproject.com/en/3.1/topics/i18n/
-
 LANGUAGE_CODE = 'en'
-
 LANGUAGES = [
     ('en', 'English'),
 ]
@@ -207,9 +170,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 CMS_CONFIRM_VERSION4 = True
 DJANGOCMS_VERSIONING_ALLOW_DELETING_VERSIONS = True
 
-AWS_ACCESS_KEY_ID = 'AKIATCKAOKMXIWWK643I'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'fundaciontest'
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 AWS_S3_OBJECT_PARAMETERS = {
@@ -219,16 +182,21 @@ AWS_LOCATION = 'ayudate-web'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'backend/static'),
 ]
-STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'backend.filer_backends.storages.StaticStorage'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'backend/static'),)
 DEFAULT_FILE_STORAGE = 'backend.filer_backends.storages.MediaStorage'
-MEDIAFILES_DIRS = [
-    os.path.join(BASE_DIR, 'data/media'),
-]
+MEDIAFILES_DIRS = [os.path.join(BASE_DIR, 'data/media'), ]
 MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 CMS_MEDIA_URL = 'https://%s/%s/data/media/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 MEDIAFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'data/media/')
-print(f"STATIC_URL {STATIC_URL}")
+if DEBUG is False:
+    STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+    STATICFILES_STORAGE = 'backend.filer_backends.storages.StaticStorage'
+    DEFAULT_FILE_STORAGE = 'backend.filer_backends.storages.MediaStorage'
+    MEDIAFILES_DIRS = [os.path.join(BASE_DIR, 'data/media'), ]
+    MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+    CMS_MEDIA_URL = 'https://%s/%s/data/media/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+    MEDIAFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'data/media/')
+print(f'DEBUG {DEBUG}')
