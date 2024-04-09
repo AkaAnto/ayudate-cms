@@ -7,6 +7,7 @@
 
 #home-menu-background img, #home-menu-background-mobile img {
     width: 100%;
+    height: 675px;
 }
 
 #home-menu-background-text-mobile{
@@ -14,11 +15,78 @@
     color: white;
     width: 90%;
     margin-left: 5%;
+    font-family: poppins;
 }
 
 #home-menu-background-text-mobile p{
     font-size: 13px;
     margin-top: 20px;
+    font-family: poppins;
+}
+
+#about-us{
+    margin-top: 240px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: poppins;
+}
+
+#about-us-text h6, #about-us-work-text h6{
+    font-size: 12px;
+    color: #BCBCBC;
+}
+
+#about-us-text h2, #about-us-work-text h2{
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#about-us-text p, #about-us-work-text p{
+    font-size: 14px;
+}
+
+#about-us-image img, #about-us-work-image img{
+    width: 100%;
+}
+
+#about-us-work{
+    margin-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: poppins;
+}
+
+#about-us-mission {
+    background: url('./about-us_Frame20.png') no-repeat;
+    height: 324px;
+    background-position-x: center;
+    background-size: contain;
+    margin-top: 20px;
+    font-family: poppins;
+}
+
+#about-us-mission h1{
+  margin-top: 60px;
+  margin-left: 15%;
+  font-size: 24px;
+}
+
+#about-us-mission p{
+    margin-left: 15%;
+    font-size: 12px;
+    width: 60%;
+    margin-top: 20px;
+}
+
+
+#about-us-vision {
+    background: url('./about-us_Frame21.png') no-repeat;
+    height: 324px;
+    background-position-x: center;
+    background-size: contain;
+    margin-top: 20px;
+    font-family: poppins;
 }
 
 @media only screen and (min-width: 993px) {

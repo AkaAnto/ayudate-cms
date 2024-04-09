@@ -7,6 +7,7 @@ from django_storage_url import dsn_configured_storage_class
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '<a string of random characters>')
 DEBUG = os.environ.get('DEBUG', False) == 'True'
+DEVELOP = os.environ.get('DEVELOP', False) == 'True'
 ALLOWED_HOSTS = [os.environ.get('DOMAIN'),]
 if DEBUG:
     ALLOWED_HOSTS = ["*", "ayudate-fundacion-develop-f037f7ceb296.herokuapp.com"]
@@ -190,7 +191,7 @@ MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 CMS_MEDIA_URL = 'https://%s/%s/data/media/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 MEDIAFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'data/media/')
-if DEBUG is False:
+if DEVELOP is False:
     STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
     STATICFILES_STORAGE = 'backend.filer_backends.storages.StaticStorage'
     DEFAULT_FILE_STORAGE = 'backend.filer_backends.storages.MediaStorage'
@@ -199,4 +200,4 @@ if DEBUG is False:
     CMS_MEDIA_URL = 'https://%s/%s/data/media/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
     MEDIAFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'data/media/')
-print(f'DEBUG {DEBUG}')
+print(f'DEBUG {DEBUG} - DEVELOP {DEVELOP}')
