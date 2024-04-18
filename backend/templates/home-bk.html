@@ -30,15 +30,11 @@
         </div>
     </div>
 </nav>
-<div class="d-block d-sm-none">
-    <div id="home-menu-background-mobile">
-        {% placeholder "imagen-fondo-menu-mobile" %}
-    </div>
+<div id="home-menu-background" class="d-md-none d-lg-block">
+    {% placeholder "imagen-fondo-menu" %}
 </div>
-<div class="d-none d-sm-block">
-    <div id="home-menu-background">
-        {% placeholder "imagen-fondo-menu" %}
-    </div>
+<div id="home-menu-background-mobile" class="d-none d-sm-block d-md-none">
+    {% placeholder "imagen-fondo-menu-mobile" %}
 </div>
 <div id="home-menu-background-text-mobile" >
     {% placeholder "texto-imagen-fondo-menu-mobile" %}
@@ -46,37 +42,40 @@
 </div>
 {% endblock %}
 {% block content %}
-    <div class="container-fluid home-menu-background-separator">
-        <div class="row about-us">
-            <div class="col-12 col-md-6 col-lg-6 about-us-text">
+    <div class="container-fluid">
+        <div class="row" id="about-us">
+            <div class="col-12 col-md-6 col-lg-6" id="about-us-text">
                 {% placeholder "about-us-text" %}
             </div>
-            <div class="col-12 col-md-6 col-lg-6 about-us-image">
+            <div class="col-12 col-md-6 col-lg-6" id="about-us-image">
                 {% placeholder "about-us-image" %}
             </div>
         </div>
-        <div class="row about-us">
-            <div class="col-12 col-md-6 col-lg-6 order-md-2 about-us-text">
-                 {% placeholder "about-us-work-text" %}
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="about-us-work">
+            <div class="col-12 col-md-6 col-lg-6" id="about-us-work-text">
+                {% placeholder "about-us-work-text" %}
             </div>
-            <div class="col-12 col-md-6 col-lg-6 order-md-1 about-us-image">
+            <div class="col-12 col-md-6 col-lg-6" id="about-us-work-image">
                 {% placeholder "about-us-work-image" %}
             </div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row" id="about-us-mission-vision-values">
-            <div class="col-12 col-md-4 col-lg-4 about-us-mission" id="about-us-mission">
+            <div class="col-12 col-md-4 col-lg-4" id="about-us-mission">
                 {% placeholder "about-us-mission-text" %}
             </div>
-            <div class="col-12 col-md-4 col-lg-4 about-us-mission" id="about-us-vision">
+            <div class="col-12 col-md-4 col-lg-4" id="about-us-vision">
                 {% placeholder "about-us-vision-text" %}
             </div>
-            <div class="col-12 col-md-4 col-lg-4 about-us-mission" id="about-us-values">
+            <div class="col-12 col-md-4 col-lg-4" id="about-us-values">
                 {% placeholder "about-us-values-values" %}
             </div>
         </div>
     </div>
+
 {% endblock content %}
 
 {% block footer %}{% endblock %}
