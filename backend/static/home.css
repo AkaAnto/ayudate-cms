@@ -42,10 +42,16 @@
 }
 
 .home-menu-background-separator{
-    margin-top: calc(100% - 180px);
+    margin-top: 50%;
     display: block;
 
 }
+@media only screen and (min-width: 470px) {
+    .home-menu-background-separator {
+        margin-top: 70%;
+    }
+}
+
 @media only screen and (min-width: 576px) {
     #home-menu-background-text-mobile{
         margin-top: 245px;
