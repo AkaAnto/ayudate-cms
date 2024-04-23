@@ -8,16 +8,15 @@
 #home-menu-background-mobile img {
     width: 100%;
     height: 800px;
-    /*height: fit-content;*/
 }
 
 #home-menu-background-text-mobile{
-    margin-top: 70%;
+    margin-top: 300px;
     color: white;
     width: 90%;
     margin-left: 5%;
     font-family: poppins;
-
+    height: 500px;
 }
 
 #home-menu-background-text-mobile p{
@@ -41,12 +40,6 @@
     height: fit-content;
 }
 
-.home-menu-background-separator{
-    margin-top: 50%;
-    display: block;
-
-}
-
 @media only screen and (min-width: 576px) {
     #home-menu-background-text-mobile{
         margin-top: 245px;
@@ -54,9 +47,6 @@
         width: 60%;
         margin-left: 20%;
         font-family: poppins;
-    }
-   .home-menu-background-separator{
-        margin-top: calc(45% - 20px);
     }
 }
 
