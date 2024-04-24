@@ -225,27 +225,17 @@
 }
 
 /*** Support Us ***/
-
-#support-us{
-    background-image: url('./support-us.png') !important;
-    background-size: contain;
-    margin-top: 40px;
-    margin-left: 15px;
-    background-repeat: no-repeat;
-    background-position-x: center;
+.donate-image img{
     width: 100%;
-    height: 338px;
+    margin-top: 10px;
 }
 
-#support-us h1{
-    font-size: 22px;
-    padding-top: 60px;
-    padding-left: 10%;
-}
-
-#support-us p {
-  font-size: 14px;
-  margin-top: 20px;
-  width: 80%;
-  margin-left: 10%;
+@media only screen and (min-width: 768px)  {
+    .donate-image img{
+        height: 265px;
+        margin-top: 30px;
+    }
+    .donate-mobile {
+         height: 265px;
+    }
 }

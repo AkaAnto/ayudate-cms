@@ -23,9 +23,9 @@
             {% block searchbar %}
                 <button class="btn btn-warning d-none d-lg-block d-xl-block d-xxl-block" id="menu-btn">DONA AQUI</button>
             {% endblock %}
-            <div id="donate-mobile" class="d-lg-none">
+            <div class="d-lg-none donate-mobile">
                 {% placeholder "texto-menu-mobile" %}
-                <button id="donate-mobile-btn" class="btn btn-warning d-lg-none" >CONTRIBUYE CON TU DONACION</button>
+                <button class="btn btn-warning d-lg-none donate-mobile-btn" >CONTRIBUYE CON TU DONACION</button>
             </div>
         </div>
     </div>
@@ -94,18 +94,19 @@
             </div>
         </div>
     </div>
-{#    <div class="container-fluid">#}
-{#        <div class="row">#}
-{#            <div class="col-12 col-md-4 col-lg-4">#}
-{#                <div id="support-us">#}
-{#                    {% placeholder "support-us-text" %}#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="col-12 col-md-8 col-lg-8>#}
-{#                {% placeholder "support-us-image" %}#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-4">
+                 <div class="donate-mobile">
+                    {% placeholder "texto-menu-mobile" %}
+                    <button class="btn btn-warning donate-mobile-btn" >CONTRIBUYE CON TU DONACION</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 col-lg-8 donate-image">
+                {% placeholder "support-us-image" %}
+            </div>
+        </div>
+    </div>
 {% endblock content %}
 
-{% block footer %}{% endblock %}

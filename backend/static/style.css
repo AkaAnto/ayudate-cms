@@ -138,26 +138,27 @@ body {
     width: 100px;
 }
 
-#donate-mobile{
+.donate-mobile {
     margin-top: 30px;
-    width: 80%;
-    margin-left: 10%;
-    height: 215px;
+    width: 90%;
+    margin-left: 5%;
+    min-height: 215px;
     border-radius: 30px;
     background-color: #E2B4FF;
     color: black;
     display: block;
 }
 
-#donate-mobile-btn{
+.donate-mobile-btn{
     bottom: 0px;
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
+    margin-left: 5%;
     font-size: 12px;
     margin-top: 3px;
+    margin-bottom: 15px;
 }
 
-#donate-mobile h2{
+.donate-mobile  h2{
     padding-top: 45px;
     padding-left: 17px;
     text-transform: capitalize;
@@ -165,7 +166,7 @@ body {
     font-size: larger;
 }
 
-#donate-mobile p{
+.donate-mobile  p{
     padding-top: 13px;
     padding-left: 17px;
     padding-right: 17px;
@@ -181,7 +182,55 @@ body {
     padding-right: 20px;
 }
 
+footer{
+    margin-top: 60px;
+    background-color: #F9F9F9;
+    font-family: "Poppins", sans-serif;
+}
+.footer-div {
+    padding-top: 60px;
+    margin-bottom: 30px;
+}
 
+#whatsapp h5{
+    text-align: left;
+    margin-left: 12px;
+}
+
+#whatsapp p{
+    text-align: left;
+    margin-left: 12px;
+    font-size: 12px;
+}
+
+#whatsapp a {
+    text-align: left;
+    margin-left: 12px;
+    color: #5E3578;
+    font-size: 12px;
+}
+
+.whatsapp-icon{
+    color: green !important;
+    font-size: 20px;
+}
+
+#social-network a {
+  color: black;
+  font-size: 22px;
+}
+
+.footer-div h4{
+    font-size: 18px ;
+}
+
+.footer-div p {
+    font-size: 12px ;
+}
+
+#social-network .email{
+    margin-top: 10px;
+}
 @media only screen and (max-width: 992px) {
     #navbarSupportedContent{
         background: rgb(255, 255, 255);
