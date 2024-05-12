@@ -16,9 +16,6 @@
 {% endblock %}
 
 {% block navbar %}
-<div id="menu-background">
-    {% placeholder "imagen-fondo-menu" %}
-</div>
 <nav class="navbar {% block navbar_options %}navbar-expand-lg navbar-dark bg-dark{% endblock %}">
     <div class="container">
         <a class="navbar-brand" href="/">{% block brand %}
@@ -31,65 +28,84 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 {% block menubar %}
-                {% show_menu 0 100 0 100 'menu/menu.html' %}
+                    {% show_menu 0 100 0 100 'menu/menu.html' %}
                 {% endblock %}
             </ul>
             {% block searchbar %}
-            <button class="btn btn-warning" id="menu-btn">DONA AQUI</button>
+                <button class="btn btn-warning d-none d-lg-block d-xl-block d-xxl-block" id="menu-btn">DONA AQUI</button>
             {% endblock %}
+            <div class="d-lg-none donate-mobile">
+                {% placeholder "texto-menu-mobile" %}
+                <button class="btn btn-warning d-lg-none donate-mobile-btn" >CONTRIBUYE CON TU DONACION</button>
+            </div>
         </div>
     </div>
 </nav>
+<div class="d-block d-sm-none">
+    <div id="home-menu-background-mobile">
+        {% placeholder "imagen-fondo-menu-mobile" %}
+    </div>
+</div>
+<div class="d-none d-sm-block">
+    <div id="home-menu-background">
+        {% placeholder "imagen-fondo-menu" %}
+    </div>
+</div>
+<div id="home-menu-background-text-mobile" >
+    {% placeholder "texto-imagen-fondo-menu-mobile" %}
+    {% block donate-navbar %}
+        <button id="home-menu-background-text-mobile-btn" class="btn btn-purple">CONTACTANOS <i class="fa fa-arrow-right"></i></button>
+    {% endblock donate-navbar %}
+</div>
 {% endblock %}
 
 {% block footer %}
     <footer class="container-fluid">
-    <div class="row">
-        <div class="col-12 col-md-4 col-lg-4 footer-div" id="whatsapp">
-            <h5>&iquest;Necesitas ayuda en l&iacute;nea?</h5>
-            <p>Investigar, prevenir y formar en los Trastornos del Comportamiento Alimentario (TCA), apoyando a quienes lo sufren.</p>
-            <a href="https://wa.me/+584143023722" target="_blank">
-                <span class="whatsapp-icon" > <i
-                        class="fab fa-whatsapp"></i>
-                </span> COMUNICATE CON NOSOTROS
-            </a>
-        </div>
-        <div class="col-12 col-md-4 col-lg-4 footer-div" id="social-network">
-            <div class="row">
-                <h4>Nuestras Redes Sociales</h4>
-                <div class="col-1">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-4 footer-div" id="whatsapp">
+                <h5>&iquest;Necesitas ayuda en l&iacute;nea?</h5>
+                <p>Investigar, prevenir y formar en los Trastornos del Comportamiento Alimentario (TCA), apoyando a quienes lo sufren.</p>
+                <a href="https://wa.me/+584143023722" target="_blank">
+                    <span class="whatsapp-icon" > <i
+                            class="fab fa-whatsapp"></i>
+                    </span> COMUNICATE CON NOSOTROS
+                </a>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4 footer-div" id="social-network">
+                <div class="row">
+                    <h4>Nuestras Redes Sociales</h4>
+                    <div class="col-1">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                    <div class="col-1">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="col-1">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-                <div class="col-1">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-                <div class="col-1">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                <div class="row">
+                    <h4>Escríbenos</h4>
+                    <div class="email row">
+                        <p><i class="fas fa-envelope"></i> fundacionayudate@gmail.com</p>
+                    </div>
+                    <div class="telefono row">
+                        <p><i class="fas fa-phone-alt"></i> +58 212 976.21.76</p>
+                    </div>
+                    <div class="telefono row">
+                        <p><i class="fas fa-mobile-alt"></i> +58 414 302.37.22</p>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <h4>Escríbenos</h4>
-                <div class="email row">
-                    <p><i class="fas fa-envelope"></i> fundacionayudate@gmail.com</p>
-                </div>
-                <div class="telefono row">
-                    <p><i class="fas fa-phone-alt"></i> +58 212 976.21.76</p>
-                </div>
-                <div class="telefono row">
-                    <p><i class="fas fa-mobile-alt"></i> +58 414 302.37.22</p>
-                </div>
+            <div class="col-12 col-md-4 col-lg-4 footer-div">
+                <h4>&iquest;Deseas aportar una contribuci&oacute;n?</h4>
+                <p class="text-justify">Tu contribuci&oacute;n puede ser el rayo de esperanza que ilumine el camino de
+                    aquellos en necesidad. Al donar a la Fundaci&oacute;n Ay&uacute;date, est&aacute;s extendiendo tu mano
+                    amiga a quienes m&aacute;s lo necesitan, ayudando a construir un futuro m&aacute;s brillante y solidario
+                    &iexcl;&Uacute;nete a nosotros en esta noble causa y s&eacute; parte del cambio que deseas ver en el
+                    mundo!</p>
+                <button class="btn btn-warning donate-mobile-btn" >CONTRIBUYE CON TU DONACION</button>
             </div>
         </div>
-        <div class="col-12 col-md-4 col-lg-4 footer-div">
-            <h4>&iquest;Deseas aportar una contribuci&oacute;n?</h4>
-            <p class="text-justify">Tu contribuci&oacute;n puede ser el rayo de esperanza que ilumine el camino de
-                aquellos en necesidad. Al donar a la Fundaci&oacute;n Ay&uacute;date, est&aacute;s extendiendo tu mano
-                amiga a quienes m&aacute;s lo necesitan, ayudando a construir un futuro m&aacute;s brillante y solidario
-                &iexcl;&Uacute;nete a nosotros en esta noble causa y s&eacute; parte del cambio que deseas ver en el
-                mundo!</p>
-            <button class="btn btn-warning donate-mobile-btn" >CONTRIBUYE CON TU DONACION</button>
-        </div>
-    </div>
-</footer>
-
+    </footer>
 {% endblock %}

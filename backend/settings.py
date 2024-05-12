@@ -122,6 +122,7 @@ CMS_TEMPLATES = [
     ('bootstrap5.html', 'Bootstrap 5 Demo'),
     ('whitenoise-static-files-demo.html', 'Static File Demo'),
     ('home.html', 'Home Template'),
+    ('tac.html', 'Tac Template'),
 ]
 WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite://:memory:')

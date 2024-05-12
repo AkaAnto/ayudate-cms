@@ -50,6 +50,14 @@
     }
 }
 
+@media only screen and (min-width: 1450px) {
+    #home-menu-background-text-mobile {
+        margin-top: 320px;
+        width: 45%;
+        margin-bottom: 100px;
+    }
+}
+
 /*** About **/
 .about-us{
     margin-top: 30px;
@@ -192,6 +200,12 @@
     }
 }
 
+@media only screen and (min-width: 960px)  {
+    .about-us-mission h1 {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+}
 /*** Our Team ***/
 
 #our-team{
