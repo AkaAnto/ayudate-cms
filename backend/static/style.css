@@ -231,6 +231,11 @@ footer{
 #social-network .email{
     margin-top: 10px;
 }
+
+#social-network, #footer-support{
+    padding-left: 25px;
+}
+
 @media only screen and (max-width: 992px) {
     #navbarSupportedContent{
         background: rgb(255, 255, 255);
@@ -440,4 +445,8 @@ footer h5 {
 .text-left i {
     font-size: 24px;
     align-items: left !important;
+}
+
+#navbarSupportedContent .donate-mobile{
+    height: auto !important;
 }

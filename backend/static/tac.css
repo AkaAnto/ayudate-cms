@@ -1,3 +1,7 @@
+.home-menu-background img{
+    width: 100%;
+}
+
 .tac-text h2{
     text-align: left;
     font-size: 24px;
@@ -58,5 +62,9 @@
         width: 80%;
         margin-left: 10%;
         height: auto !important;
+    }
+    .tac {
+        width: 80% !important;
+        margin-left: 10%;
     }
 }

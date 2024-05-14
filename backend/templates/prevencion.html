@@ -1,0 +1,90 @@
+{% extends "bootstrap5.html" %}
+{% load cms_tags menu_tags %}
+{% load static %}
+{% block bottom_css %}
+    <link href="{% static 'prevencion.css' %}" rel="stylesheet">
+{% endblock %}
+{% block donate-navbar %}{% endblock donate-navbar %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="row prevencion">
+            <div class="col-12 col-md-6 col-lg-6 prevention-image order-md-2">
+                {% placeholder "prevention-image-1" %}
+            </div>
+            <div class="col-12 col-md-6 col-lg-6 prevention-text order-md-1">
+                {% placeholder "prevention-text-1" %}
+                <a class="btn btn-info btn-prevention" target="_blank" href="https://drive.google.com/file/d/17cvjvi6n5zH2tD1mbTx_5EJap4u2Kiqn/view?usp=drive_link">
+                    Bienestar Emocional
+                </a>
+                <a class="btn btn-info btn-prevention" target="_blank" href="https://drive.google.com/file/d/19_MeggWYybncjJ53juP5eR0ZfNGfxYdy/view?usp=drive_link">
+                    Elementos del Bienestar Emocional
+                </a>
+                <a class="btn btn-info btn-prevention" target="_blank" href="https://drive.google.com/file/d/1dVN52IOeuKnLkPawRDXitnHw9cunABw1/view?usp=drive_link">
+                    Emociones basicas
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row prevencion">
+            <div class="col-12 col-md-6 col-lg-6 prevention-image order-md-1">
+                {% placeholder "autoestima-image" %}
+            </div>
+            <div class="col-12 col-md-6 col-lg-6 prevention-text order-md-2">
+                {% placeholder "autoestima-text" %}
+                <a class="btn btn-info btn-prevention" target="_blank" href="https://drive.google.com/file/d/1TE6lL8yIaZl05Lq0PNj_-F0P4Hus91cW/view?usp=drive_link">
+                    Autoestima
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row prevencion">
+            <div class="col-12 col-md-6 col-lg-6 prevention-image order-md-2">
+                {% placeholder "habilidades-image" %}
+            </div>
+            <div class="col-12 col-md-6 col-lg-6 prevention-text order-md-1">
+                {% placeholder "habilidades-text" %}
+                <a class="btn btn-info btn-prevention" target="_blank" href="https://drive.google.com/file/d/1XyIGsbs8gDZ9ICKZiXWrQHzv8M2i0c4s/view?usp=drive_link">
+                    Habilidades Sociales
+                </a>
+                <a class="btn btn-info btn-prevention" target="_blank" href="https://drive.google.com/file/d/1mRL_cCFfdAQrGU0D_JglZ4_l-w1z--Di/view?usp=drive_link">
+                    Entrenar a tu hijo en Habilidades Sociales
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row prevencion">
+            <div class="col-12 col-md-6 col-lg-6 prevention-image order-md-1">
+                {% placeholder "alimentacion-image" %}
+            </div>
+            <div class="col-12 col-md-6 col-lg-6 prevention-text order-md-2">
+                {% placeholder "alimentacion-text" %}
+                <a class="btn btn-info btn-prevention" target="_blank" href="https://drive.google.com/file/d/1msNkmBptFZivJda0ZJ9aXvUGMAk3Evh3/view?usp=drive_link">
+                    Alimentacion Emocional
+                </a>
+                <a class="btn btn-info btn-prevention" target="_blank" href="https://drive.google.com/file/d/1C_oMGOjv8KQ-w3x5UvmP74L2Qha_lzsn/view?usp=drive_link">
+                    Comer para vivir o vivir para comer
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row prevencion">
+            <div class="col-12 col-md-6 col-lg-6 prevention-image order-md-2">
+                {% placeholder "saludable-image" %}
+            </div>
+            <div class="col-12 col-md-6 col-lg-6 prevention-text order-md-1">
+                {% placeholder "saludable-text" %}
+                <a class="btn btn-info btn-prevention" target="_blank" href="https://drive.google.com/file/d/16banHEXe1vnhJxHtfih5leY4C1t2zPVo/view?usp=drive_link">
+                    Alimentacion Saludable
+                </a>
+                <a class="btn btn-info btn-prevention" target="_blank" href="https://drive.google.com/file/d/1iDkUvevP9dakYHtaJB3ZNxc6QG7mkJJo/view?usp=drive_link">
+                    Manual de Alimentacion Saludable
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+

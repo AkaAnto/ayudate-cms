@@ -1,0 +1,56 @@
+#home-menu-background img{
+    width: 100%;
+}
+
+.prevention-image img {
+    width: 80%;
+    margin-left: 10%;
+    height: 350px;
+    padding-top: 40px;
+}
+
+.prevention-text h2, .prevention-text p{
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 20px;
+    text-align: justify;
+}
+
+.prevention-text h2{
+    padding-top: 40px;
+}
+
+.prevencion {
+    margin-top: 40px;
+}
+
+.btn-prevention{
+    background-color: #ECE2F2;
+    border-radius: 50px;
+    color: #5E3578;
+    text-transform: uppercase;
+    margin-left: 10%;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 10px;
+    display: block;
+}
+.btn-prevention:hover{
+    background-color: #ECE2F2 !important;
+}
+
+@media only screen and (min-width: 1024px)  {
+    .prevention-image img {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .prevention-text h2, .prevention-text p{
+        width: 60%;
+        margin-left: 20%;
+    }
+    .btn-prevention{
+        margin-left: 20%;
+        width: 60%;
+    }
+}
