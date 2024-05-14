@@ -2,6 +2,10 @@ body {
     overflow-x: hidden;
 }
 
+#home-menu-background img{
+    width: 100%;
+}
+
 .poppins-thin {
     font-family: "Poppins", sans-serif;
     font-weight: 100;
