@@ -1,5 +1,6 @@
 body {
     overflow-x: hidden;
+    font-family: poppins;
 }
 
 #home-menu-background img{
@@ -120,6 +121,12 @@ body {
     z-index: 1000;
     height: 85px;
     margin-bottom: -85px;
+}
+
+#logo_image{
+    width: 50% !important;
+    margin-top: 20px !important;
+    margin-left: 0% !important;
 }
 
 .navbar-nav {
