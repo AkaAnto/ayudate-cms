@@ -2,111 +2,144 @@
 {% load cms_tags menu_tags %}
 {% load static %}
 {% block bottom_css %}
-    <link href="{% static 'tac.css' %}" rel="stylesheet">
+<link href="{% static 'tac.css' %}" rel="stylesheet">
 {% endblock %}
 {% block donate-navbar %}{% endblock donate-navbar %}
 {% block content %}
-    <div class="container-fluid">
-        <div class="row tac">
-            <div class="col-12 tac-text">
-                {% placeholder "tac-text" %}
-            </div>
-            <div class="col-12 tac-image">
-                {% placeholder "tac-image" %}
-            </div>
+<div class="container-fluid">
+    <div class="row tac">
+        <div class="col-12 tac-text">
+            {% placeholder "tac-text" %}
+        </div>
+        <div class="col-12 tac-image">
+            {% placeholder "tac-image" %}
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row tac-types">
-            <div class="col-12 tac-types-title">
-                {% placeholder "tac-types-title" %}
-            </div>
-            <div class="col-12 col-lg-4 tac-types-content">
-                {% placeholder "tac-types-uno" %}
-            </div>
-            <div class="col-12 col-lg-4 tac-types-content tac-types-content-dos">
-                {% placeholder "tac-types-dos" %}
-            </div>
-            <div class="col-12 col-lg-4 tac-types-content tac-types-content-tres">
-                {% placeholder "tac-types-tres" %}
-            </div>
-            <hr>
+</div>
+<div class="container-fluid">
+    <div class="row tac-types">
+        <div class="col-12 tac-types-title">
+            {% placeholder "tac-types-title" %}
         </div>
+        <div class="col-12 col-lg-4 tac-types-content">
+            {% placeholder "tac-types-uno" %}
+        </div>
+        <div class="col-12 col-lg-4 tac-types-content tac-types-content-dos">
+            {% placeholder "tac-types-dos" %}
+        </div>
+        <div class="col-12 col-lg-4 tac-types-content tac-types-content-tres">
+            {% placeholder "tac-types-tres" %}
+        </div>
+        <hr>
     </div>
-    <div class="container-fluid">
-        <div class="row tac-faq">
-            {% placeholder "tac-faq-title" %}
-        </div>
+</div>
+<div class="container-fluid">
+    <div class="row tac-faq">
+        {% placeholder "tac-faq-title" %}
+    </div>
     <div class="row">
         <div class="accordion accordion-flush" id="accordionFlushExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                  <span>¿Cómo saber si <b>padeces de TCA?</b></span>
-              </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                Esta pregunta puedes responderla sencillamente analizando cómo te sientes. Al padecer TCA puedes detectar en ti algunos de estos síntomas:
-                <ul>
-                    <li>Existe una relación inadecuada con la comida.</li>
-                    <li>Sensación de pérdida de control ante la comida, el peso o/y la figura.</li>
-                    <li>Miedo intenso a comer y/o engordar.</li>
-                    <li>Obsesión con la comida, dietas, peso, figura y/o conductas compensatorias.</li>
-                    <li>Malestar psicológico: irritabilidad, tristeza, retraimiento social, ansiedad, cambios de humor, baja autoestima.</li>
-                    <li>Episodios de sobreingesta.</li>
-                    <li>Conductas compensatorias para evitar ganar peso.</li>
-                </ul>
-              </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <span>¿Cómo saber si <b>padeces de TCA?</b></span>
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        Identificar si alguien tiene un trastorno de la conducta alimentaria (TCA) puede ser complicado,
+                        ya que los síntomas pueden variar ampliamente y las personas a menudo ocultan sus
+                        comportamientos.
+                        Sin embargo, hay algunas señales y síntomas comunes que pueden indicar la presencia de un TCA.
+                        Aquí te dejo algunos aspectos a considerar.
+
+                        <h4>Señales y Síntomas Comunes</h4>
+
+                        <h6>1. Cambios en los Hábitos Alimenticios:</h6>
+                        <ul>
+                            <li>Evitar comidas o grupos de alimentos específicos.</li>
+                            <li>Comer en secreto o mostrar comportamientos relacionados con la alimentación que parecen
+                                inusuales.
+                            </li>
+                            <li>Hacer dietas extremas o tener un enfoque obsesivo hacia la comida y la nutrición.</li>
+                        </ul>
+
+                        <h6>2. Preocupación por el Peso y la Imagen Corporal:</h6>
+                        <ul>
+                            <li>Hablar constantemente sobre el peso, la dieta o las calorías.</li>
+                            <li>Mostrar insatisfacción con su cuerpo, incluso si tiene un peso saludable. </li>
+                            <li>Compararse constantemente con los demás en términos de apariencia.</li>
+                        </ul>
+
+                        <h6>3. Comportamientos de Purgado:</h6>
+                        <ul>
+                            <li>Inducir el vómito, usar laxantes, o hacer ejercicio excesivo tras comer.</li>
+                        </ul>
+
+                        <h6>4. Cambios Emocionales:</h6>
+                        <ul>
+                            <li>Aislarse de amigos y familiares.</li>
+                            <li>Oscilar entre la ansiedad, la depresión y la irritabilidad.</li>
+                            <li>Experimentar cambios en el estado de ánimo, especialmente relacionados con la comida.</li>
+                        </ul>
+
+                         <h6>5. Problemas Físicos:</h6>
+                        <ul>
+                            <li>Pérdida de peso extrema o rápida.</li>
+                            <li>Problemas de salud como deshidratación, problemas digestivos, fatiga o irregularidades menstruales en mujeres.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  <span>¿Qué <b>comportamientos</b> tiene una persona con TCA?</span>
-              </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                <ul>
-                  <li>Pérdida o aumento de peso de origen desconocido.</li>
-                  <li>Ayuno (largos periodos de restricciones alimentarias).</li>
-                  <li>Presencia de excusa de manera recurrente para no comer en público.</li>
-                  <li>Preocupación excesiva por el peso, la figura, las calorías y el ejercicio físico.</li>
-                  <li>Cambio negativo en el estado de ánimo.</li>
-                  <li>Intentos frecuentes de controlar la apariencia física y la alimentación.</li>
-                  <li>Irritabilidad y discusiones en torno a la comida.</li>
-                  <li>Rituales al comer: cortar la comida en pedazos muy pequeños, tomar mucha agua antes, regar la comida por todo el plato.</li>
-                  <li>Tendencia al aislamiento.</li>
-                  <li>Uso el baño después de la comida.</li>
-                  <li>Descontrol al comer.</li>
-                  <li>Rechazo total a determinados alimentos que “no son sanos”.</li>
-                </ul>
-              </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <span>¿Qué Hacer si Te Preocupa Alguien?</span>
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Habla con Ellos: Si sospechas que alguien está lidiando con un TCA, considera hablar con ellos de manera abierta y comprensiva. Escúchales sin juzgar.</li>
+                            <li>Sugiere Ayuda Profesional: Anima a la persona a que busque la ayuda de un médico o un profesional de la salud mental especializado en trastornos alimentarios.</li>
+                            <li>Informa a Otros: Si es necesario, informa a un familiar o amigo cercano que pueda ayudar a la persona a recibir el apoyo que necesita.
+                                <a href="https://wa.me/+584143023722" target="_blank">
+                                    <span class="whatsapp-icon" > <i
+                                            class="fab fa-whatsapp"></i>
+                                    </span> COMUNICATE CON NOSOTROS
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  <span><b>Si me identifico o identifico</b> a un ser querido, <b>¿Qué debo hacer?</b> </span>
-              </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                <ul>
-                  <li>1. Hablar con la persona afectada.</li>
-                  <li>2. Comunicarle la preocupación en torno a su salud.</li>
-                  <li>3. Hablar con un profesional de la salud mental, para que te ayude a acompañarlo.</li>
-                  <li>4. Insistirle en asistir a la ayuda de un profesional de la salud mental.</li>
-                  <li>5. Ayudarlo a seguir las indicaciones médicas para mejorar.</li>
-                  <li>6. Brindarle apoyo y comprensión.</li>
-                </ul>
-              </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                        <span><b>Si me identifico o identifico</b> a un ser querido, <b>¿Qué debo hacer?</b> </span>
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                     data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>1. Hablar con la persona afectada.</li>
+                            <li>2. Comunicarle la preocupación en torno a su salud.</li>
+                            <li>3. Hablar con un profesional de la salud mental, para que te ayude a acompañarlo.</li>
+                            <li>4. Insistirle en asistir a la ayuda de un profesional de la salud mental.</li>
+                            <li>5. Ayudarlo a seguir las indicaciones médicas para mejorar.</li>
+                            <li>6. Brindarle apoyo y comprensión.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
     </div>
 
-    </div>
+</div>
 {% endblock content %}
 
