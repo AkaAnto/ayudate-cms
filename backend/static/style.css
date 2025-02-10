@@ -1,6 +1,6 @@
 body {
     overflow-x: hidden;
-    font-family: poppins;
+    font-family: poppins !important;
 }
 
 #home-menu-background img{
